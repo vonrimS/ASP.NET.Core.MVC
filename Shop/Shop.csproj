@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Microsoft.AspNetCore.StaticFiles" />
+    <None Remove="Microsoft.AspNet.Mvc" />
+    <None Remove="Data\" />
+    <None Remove="Data\Models\" />
+    <None Remove="Data\Interfaces\" />
+    <None Remove="Data\Mocks\" />
+    <None Remove="Controllers\" />
+    <None Remove="Views\" />
+    <None Remove="Views\Cars\" />
+    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <None Remove="ViewModels\" />
+    <None Remove="Views\Shared\" />
+    <None Remove="bootstrap" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="bootstrap" Version="5.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Data\Models\" />
+    <Folder Include="Data\Interfaces\" />
+    <Folder Include="Data\Mocks\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Cars\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\img\" />
+  </ItemGroup>
+</Project>
